@@ -3,6 +3,10 @@ server:
 spring:
   data:
     elasticsearch:
-      cluster-nodes: 172.16.100.31:9300
+      # 连接节点,注意在集群中通信都是9300端口，否则会报错无法连接上！
+      cluster-nodes: 172.16.100.31:9300,172.16.100.23:9300,172.16.100.24:9300
       repositories:
+        # 仓库中数据存储
         enabled: true
+      # 集群名
+      cluster-name: elasticsearch
