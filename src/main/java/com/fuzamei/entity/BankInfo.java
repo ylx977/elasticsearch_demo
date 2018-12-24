@@ -21,11 +21,11 @@ import java.io.Serializable;
 @Document(indexName = "bank",type = "_doc")
 public class BankInfo implements Serializable{
 
-    @JsonProperty("id")
+    @JsonProperty("_id")
     @Field(type = FieldType.Long)
     private Long id;
 
-    @JsonProperty("accountNumber")
+    @JsonProperty("account_number")//这个可以实现字段映射
     @Field(type = FieldType.Long)
     private Long accountNumber;
 
